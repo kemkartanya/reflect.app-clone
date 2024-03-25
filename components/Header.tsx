@@ -10,7 +10,7 @@ export default function Header() {
             <Image src={logo} className='w-10' alt='logo' />
             <Link href="/">Reflect</Link>
         </div>
-        <nav className='flex border gap-4 rounded-full py-2 px-4 font-thin border-[#272240]'>
+        <nav className='flex border gap-4 rounded-full py-2 px-4 font-thin border-[#272240] font-bold'>
             <Link href="#product">Product</Link>
             <Link href="#pricing">Pricing</Link>
             <Link href="#company">Company</Link>
