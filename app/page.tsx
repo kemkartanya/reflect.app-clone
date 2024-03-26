@@ -6,6 +6,8 @@ import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
 import Link from "next/link";
 import Header from "../components/Header";
 import { HoverEffect } from "../components/ui/card-hover-effect";
+import { HoverEffect1 } from "@/components/ui/card-hover-effect1";
+import { HoverEffect2 } from "@/components/ui/card-hover-effect2";
 import Footer from "@/components/Footer";
 import { InfiniteMovingCards } from "../components/ui/infinite-moving-cards";
 import { motion } from "framer-motion";
@@ -17,46 +19,53 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-2">
       <Header />
       <div className='mx-auto mt-24 justify-center flex flex-col items-center'>
-        <div className='text-[#A5AADC] border border-[#493A72] w-fit rounded-full py-1 px-3'>✨ New: Our AI Integration just landed</div>
-        <div className='text-6xl font-bold my-4'>Think better with Reflect</div>
+        <div className='text-[#A5AADC] border border-[#493A72] w-fit rounded-full py-1 px-3 text-base'>✨ New: Our AI Integration just landed</div>
+        <div className='text-6xl font-normal my-4'>Think better with Reflect</div>
         <div className='text-[#86809C] text-lg'>Never miss a note, idea or connection.</div>
       </div>
+      <iframe
+        className='h-[30rem] w-[60rem] mt-12'
+        allowFullScreen
+        loading='lazy'
+        src={`https://www.youtube.com/embed/fYhInYej-lg?enablejsapi=1&origin=https://mindfulfeed.in/`}
+        frameBorder="0"
+        referrerPolicy="no-referrer" />
       <div className="max-w-5xl mx-auto px-8">
         <HoverEffect items={projects} />
       </div>
       <div className='mx-auto my-12 justify-center flex flex-col items-center'>
         <div className='text-[#A5AADC] border border-[#493A72] w-fit rounded-full py-1 px-3 text-base'>Reflect AI</div>
-        <div className='text-6xl font-bold my-4'>Notes with an AI assistant</div>
+        <div className='text-6xl font-normal my-4'>Notes with an AI assistant</div>
         <div className='text-[#86809C] text-lg'>Reflect uses GPT-4 and Whisper from OpenAI to improve your writing, <br />
 organize your thoughts, and act as your intellectual thought partner.</div>
       </div>
 
       <div className="max-w-5xl mx-auto px-3 justify-center flex flex-col items-center">
         <div className="mt-3 text-2xl">What can you do with Reflect AI?</div>
-        <HoverEffect items={projects2} />
+        <HoverEffect1 items={projects2} />
       </div>
 
       <div className='mx-auto my-12 justify-center flex flex-col items-center'>
         <div className='text-[#A5AADC] border border-[#493A72] w-fit rounded-full py-1 px-3 text-base'>All your notes, connected</div>
-        <div className='text-6xl font-bold my-4'>Give your brain superpowers</div>
+        <div className='text-6xl font-normal my-4'>Give your brain superpowers</div>
         <div className='text-[#86809C] text-lg'>Mirror the way your mind works by associating notes through backlinks. <br />
 Reflect builds you a second brain that you can reference anytime.</div>
       </div>
 
       <div className='mx-auto my-12 justify-center flex flex-col items-center'>
         <div className='text-[#A5AADC] border border-[#493A72] w-fit rounded-full py-1 px-3 text-base'>Research and reading</div>
-        <div className='text-6xl font-bold my-4'>Never lose information</div>
+        <div className='text-6xl font-normal my-4'>Never lose information</div>
         <div className='text-[#86809C] text-lg '>Collect your web snippets, Kindle highlights and important links – all in one place. <br />
 Then quickly find them again from any device.</div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-3">
-        <HoverEffect items={projects3} />
+      <div className="max-w-5xl px-3">
+        <HoverEffect2 items={projects3} />
       </div>
 
       <div className='mx-auto my-12 justify-center flex flex-col items-center'>
         <div className='text-[#A5AADC] border border-[#493A72] w-fit rounded-full py-1 px-3 text-base'>Meetings</div>
-        <div className='text-6xl font-bold my-4'>Get more out
+        <div className='text-6xl font-normal my-4'>Get more out <br />
 of your meetings</div>
         <div className='text-[#86809C] text-lg '>Keep track of all your meetings and what was discussed. <br />
 Import events quickly with our Google Calendar and Outlook integrations.</div>
@@ -64,19 +73,38 @@ Import events quickly with our Google Calendar and Outlook integrations.</div>
 
       <div className='mx-auto my-12 justify-center flex flex-col items-center'>
         <div className='text-[#A5AADC] border border-[#493A72] w-fit rounded-full py-1 px-3 text-base'>Integrations</div>
-        <div className='text-6xl font-bold my-4'>Use Reflect
+        <div className='text-6xl font-normal my-4'>Use Reflect <br />
 with other apps</div>
       </div>
 
       <div className='mx-auto my-12 justify-center flex flex-col items-center'>
         <div className='text-[#A5AADC] border border-[#493A72] w-fit rounded-full py-1 px-3 text-base'>Get access</div>
-        <div className='text-6xl font-bold my-4'>We like keeping things simple
+        <div className='text-6xl font-normal my-4'>We like keeping things simple <br />
 One plan one price.</div>
+        <div>
+          <div className="flex justify-center gap-2 m-1">
+            <div className="text-5xl font-bold">$10</div>
+            <div>/month <br/> (billed annually)</div>
+          </div>
+          <div className="flex gap-5 m-3 justify-between">
+            <div>
+              <li className="my-3">Networked note-taking</li>
+              <li className="my-3">Networked note-taking</li>
+              <li className="my-3">Networked note-taking</li>
+            </div>
+            <div>
+              <li className="my-3">Networked note-taking</li>
+              <li className="my-3">Networked note-taking</li>
+              <li className="my-3">Networked note-taking</li>
+            </div>
+          </div>
+        </div>
+        <div className='text-[#A5AADC] border border-[#493A72] w-fit rounded-lg py-1 px-3 text-base mt-3'>Start your 14-day trial</div>
       </div>
 
-      <div className='mx-auto mt-12 justify-center flex flex-col items-center'>
+      <div className='mx-auto my-12 justify-center flex flex-col items-center'>
         <div className='text-[#A5AADC] border border-[#493A72] w-fit rounded-full py-1 px-3 text-base'>Wall of love</div>
-        <div className='text-6xl font-bold my-4'>Loved by thinkers</div>
+        <div className='text-6xl font-normal my-4'>Loved by thinkers</div>
         <div className='text-[#86809C] text-lg '>Here’s what people are saying about us</div>
       </div>
       <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
@@ -92,7 +120,7 @@ One plan one price.</div>
         />
       </div>
 
-      <div className='mx-auto mt-12 justify-center flex flex-col items-center'>
+      <div className='mx-auto my-12 justify-center flex flex-col items-center'>
         <div className='text-[#A5AADC] border border-[#493A72] w-fit rounded-full py-1 px-3 text-base'>About</div>
         <div className='text-6xl font-normal my-4'>We're an indie team <br/>
 dotted across the globe</div>
@@ -101,20 +129,20 @@ dotted across the globe</div>
         <GlobeDemo />
       </div>
 
-      <div className='mx-auto mt-12 justify-center flex flex-col items-center'>
+      <div className='mx-auto my-12 justify-center flex flex-col items-center'>
         <div className='text-[#A5AADC] border border-[#493A72] w-fit rounded-full py-1 px-3 text-base'>Academy</div>
-        <div className='text-6xl font-bold my-4'>Learn how to take great
+        <div className='text-6xl font-normal my-4'>Learn how to take great <br />
 notes at our academy</div>
-        <div className='text-[#86809C] text-lg '>Master the principles of note-taking in
+        <div className='text-[#86809C] text-lg '>Master the principles of note-taking in <br />
 Reflect's free online Academy.</div>
-        <div className='text-[#A5AADC] border border-[#493A72] w-fit rounded-3xl py-1 px-3 text-base'>Take the course</div>
+        <div className='text-[#A5AADC] border border-[#493A72] w-fit rounded-lg py-1 px-3 text-base mt-4'>Take the course</div>
       </div>
 
-      <div className='mx-auto mt-12 justify-center flex flex-col items-center'>
+      <div className='mx-auto my-12 justify-center flex flex-col items-center'>
         <div className='text-[#A5AADC] border border-[#493A72] w-fit rounded-full py-1 px-3 text-base'>Get started</div>
-        <div className='text-6xl font-bold my-4'>Think better with Reflect</div>
+        <div className='text-6xl font-normal my-4'>Think better with Reflect</div>
         <div className='text-[#86809C] text-lg '>Never miss a note, idea or connection.</div>
-        <div className='text-[#A5AADC] border border-[#493A72] w-fit rounded-3xl py-1 px-3 text-base'>Start your 14-day trial</div>
+        <div className='text-[#A5AADC] border border-[#493A72] w-fit rounded-lg py-1 px-3 text-base mt-4'>Start your 14-day trial</div>
       </div>
 
       <Footer />

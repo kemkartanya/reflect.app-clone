@@ -5,12 +5,12 @@ import logo from '../public/logo.png';
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between w-full p-4 border-b border-[#272240]">
+    <header className="flex items-center justify-between w-full py-4 px-8 border-b border-[#272240] sticky top-0 z-50 text-sm">
         <div className='flex items-center gap-2'>
             <Image src={logo} className='w-10' alt='logo' />
             <Link href="/">Reflect</Link>
         </div>
-        <nav className='flex border gap-4 rounded-full py-2 px-4 font-thin border-[#272240] font-bold'>
+        <nav className='flex border gap-4 rounded-full py-2 px-4 border-[#272240] font-normal'>
             <Link href="#product">Product</Link>
             <Link href="#pricing">Pricing</Link>
             <Link href="#company">Company</Link>
